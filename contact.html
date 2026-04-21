@@ -6,6 +6,62 @@
   <title>Contact | The Trading Performance System</title>
   <meta name="description" content="Get in touch with the team behind The Trading Performance System. Questions about the journal, bulk orders, or press enquiries.">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── CONTACT PAGE MOBILE ─────────────────────────────── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .contact-info-box {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 2px;
+      padding: 2rem;
+    }
+    .contact-detail { margin-bottom: 1.4rem; }
+    .contact-detail__label {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--grey);
+      margin-bottom: 0.3rem;
+    }
+    .contact-detail__value {
+      font-size: 0.95rem;
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    .contact-social-link {
+      font-size: 0.9rem;
+      color: var(--sage);
+      transition: opacity 0.2s;
+    }
+    .contact-social-link:hover { opacity: 0.72; }
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 3.5rem;
+    }
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .topics-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 600px) {
+      .contact-info-box { padding: 1.4rem; }
+    }
+  </style>
 </head>
 <body>
 
@@ -43,22 +99,22 @@
     </div>
   </div>
 
-  <!-- ── CONTACT GRID ──────────────────────────────────────── -->
+  <!-- ── CONTACT SECTION ───────────────────────────────────── -->
   <section class="section section--cream">
     <div class="container">
       <div class="contact-grid">
 
-        <!-- Contact Form (left, larger column) -->
-        <div class="contact-form-wrap">
+        <!-- LEFT: Form -->
+        <div>
           <span class="tag">Send a Message</span>
-          <h2>Write to Us</h2>
+          <h2 style="margin-bottom: 0.8rem;">Write to Us</h2>
           <div class="divider divider--left"></div>
 
           <!--
-            SETUP: Sign up free at formspree.io using sophienoguera@hotmail.com
-            Create a new form, then replace YOUR_FORMSPREE_ID below with your form ID.
+            SETUP: Sign up free at formspree.io with sophienoguera@hotmail.com
+            Create a form → copy the ID → replace YOUR_FORMSPREE_ID below.
             e.g. action="https://formspree.io/f/xpwzabcd"
-            Your email address is never shown on the website.
+            Your email is never visible on the site.
           -->
           <form
             class="contact-form"
@@ -94,10 +150,9 @@
               <label for="message">Message</label>
               <textarea id="message" name="message" rows="6" placeholder="Your message..." required></textarea>
             </div>
-            <!-- Hidden field so Formspree knows where to send replies -->
             <input type="hidden" name="_subject" value="New TPS Website Enquiry">
-            <button type="submit" class="btn btn--primary btn--large">Send Message</button>
-            <p id="formSuccess" style="display:none; color:#3a6347; font-weight:700; font-size:0.9rem; margin-top:1rem; letter-spacing:0.04em;">
+            <button type="submit" class="btn btn--primary btn--large" style="width:100%;">Send Message</button>
+            <p id="formSuccess" style="display:none; color:#3a6347; font-weight:700; font-size:0.9rem; margin-top:1rem;">
               ✓ Message sent. We'll get back to you within 48 hours.
             </p>
             <p id="formError" style="display:none; color:#c0392b; font-size:0.88rem; margin-top:1rem;">
@@ -106,45 +161,40 @@
           </form>
         </div>
 
-        <!-- Contact Details (right, smaller column) -->
-        <div class="contact-info">
-          <span class="tag">Other Ways to Reach Us</span>
-          <h2 style="font-size: 1.6rem; margin-bottom: 1rem;">Direct Contact</h2>
+        <!-- RIGHT: Info -->
+        <div>
+          <span class="tag">Direct Contact</span>
+          <h2 style="font-size: 1.5rem; margin-bottom: 0.8rem;">Other Ways to Reach Us</h2>
           <div class="divider divider--left"></div>
 
-          <div class="contact-detail">
-            <div class="contact-detail__label">Publisher</div>
-            <div class="contact-detail__value">SN Trades Publishing</div>
-          </div>
-
-          <div class="contact-detail">
-            <div class="contact-detail__label">Response Time</div>
-            <div class="contact-detail__value">Within 48 hours (Mon–Fri)</div>
-          </div>
-
-          <div class="contact-detail" style="margin-top: 2rem;">
-            <div class="contact-detail__label">Social</div>
-            <div class="contact-detail__value">
-              <a href="https://www.instagram.com/tradingperformancesystem" target="_blank" class="contact-social-link">
-                Instagram — @tradingperformancesystem
-              </a>
-              <a href="https://www.tiktok.com/@tradingperformancesystem" target="_blank" class="contact-social-link">
-                TikTok — @tradingperformancesystem
-              </a>
+          <div class="contact-info-box">
+            <div class="contact-detail">
+              <div class="contact-detail__label">Publisher</div>
+              <div class="contact-detail__value">SN Trades Publishing</div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail__label">Response Time</div>
+              <div class="contact-detail__value">Within 48 hours (Mon–Fri)</div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail__label">Social</div>
+              <div class="contact-detail__value">
+                <a href="https://www.instagram.com/tradingperformancesystem" target="_blank" class="contact-social-link">Instagram — @tradingperformancesystem</a>
+                <a href="https://www.tiktok.com/@tradingperformancesystem" target="_blank" class="contact-social-link">TikTok — @tradingperformancesystem</a>
+              </div>
+            </div>
+            <div class="contact-detail" style="margin-bottom:0;">
+              <div class="contact-detail__label">Buy the Book</div>
+              <div class="contact-detail__value">
+                <a href="https://www.etsy.com/uk/shop/SNTradesPublishing" target="_blank" class="contact-social-link">Etsy — SNTradesPublishing</a>
+                <a href="purchase.html" class="contact-social-link">Amazon · All Retailers</a>
+              </div>
             </div>
           </div>
 
-          <div class="contact-detail" style="margin-top: 2rem;">
-            <div class="contact-detail__label">Buy the Book</div>
-            <div class="contact-detail__value">
-              <a href="https://www.etsy.com/uk/shop/SNTradesPublishing" target="_blank" class="contact-social-link">Etsy — SNTradesPublishing</a>
-              <a href="purchase.html" class="contact-social-link">Amazon · All Retailers</a>
-            </div>
-          </div>
-
-          <div style="margin-top: 2.5rem; padding: 1.5rem; background: var(--light); border: 1.5px solid var(--border); border-radius: 2px;">
-            <p style="font-size: 0.86rem; margin: 0; font-style: italic; color: var(--muted);">
-              For order queries, please have your order number ready. For download issues, include the access code from your journal's inside cover.
+          <div style="margin-top: 1.2rem; padding: 1.2rem 1.5rem; background: var(--light); border: 1.5px solid var(--border); border-radius: 2px;">
+            <p style="font-size: 0.84rem; margin: 0; font-style: italic; color: var(--muted);">
+              For order queries, please include your order number. For download issues, include the access code from your journal's inside cover.
             </p>
           </div>
         </div>
@@ -161,7 +211,7 @@
         <h2>What to Expect</h2>
         <div class="divider"></div>
       </div>
-      <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="topics-grid">
         <div class="feature-card">
           <div class="feature-card__number">📦</div>
           <h3>Orders & Shipping</h3>
@@ -216,7 +266,6 @@
       const btn = form.querySelector('button[type="submit"]');
       btn.textContent = 'Sending...';
       btn.disabled = true;
-
       try {
         const res = await fetch(form.action, {
           method: 'POST',
@@ -229,7 +278,7 @@
           document.getElementById('formError').style.display = 'none';
           btn.style.display = 'none';
         } else {
-          throw new Error('Server error');
+          throw new Error();
         }
       } catch {
         document.getElementById('formError').style.display = 'block';
