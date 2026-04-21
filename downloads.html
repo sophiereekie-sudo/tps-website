@@ -15,7 +15,10 @@
         The Trading Performance System
         <span>For The Structured Trader</span>
       </a>
-      <ul class="nav__links nav-text-links">
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="purchase.html">Buy the Book</a></li>
         <li><a href="downloads.html" class="active">Free Downloads</a></li>
@@ -24,6 +27,12 @@
       </ul>
     </div>
   </nav>
+  <script>
+    document.getElementById('navToggle').addEventListener('click', function() {
+      this.classList.toggle('open');
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+  </script>
 
   <!-- ── PAGE HERO ────────────────────────────────────────── -->
   <div class="page-hero">
