@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Downloads | The Trading Performance System</title>
+  <meta name="description" content="Access your free downloadable resources with your book purchase code.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        The Trading Performance System
+        <span>For The Structured Trader</span>
+      </a>
+      <ul class="nav__links nav-text-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="purchase.html">Buy the Book</a></li>
+        <li><a href="downloads.html" class="active">Free Downloads</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="purchase.html" class="btn btn--primary">Buy Now — £25.99</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── PAGE HERO ────────────────────────────────────────── -->
+  <div class="page-hero">
+    <div class="container">
+      <span class="tag tag--light">Buyer Exclusive</span>
+      <h1>Free Downloads</h1>
+      <p>Enter the access code printed inside your copy of the TPS journal to unlock your free resources.</p>
+    </div>
+  </div>
+
+  <!-- ── ACCESS GATE ───────────────────────────────────────── -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="access-box">
+        <span class="tag">Your Access Code</span>
+        <h2>Unlock Your Resources</h2>
+        <p>Find your unique code on the inside cover of your journal. Enter it below to access your downloads.</p>
+        <div class="access-form">
+          <input type="text" id="codeInput" placeholder="Enter your access code" maxlength="12" autocomplete="off">
+          <button class="btn btn--primary" onclick="checkCode()">Unlock</button>
+        </div>
+        <p id="errorMsg" style="color:#c0392b; font-size:0.85rem; margin-top:1rem; display:none; max-width:100%;">
+          That code wasn't recognised. Check the inside cover of your journal and try again.
+        </p>
+      </div>
+
+      <!-- Downloads (hidden until code verified) -->
+      <div class="downloads-grid" id="downloadsGrid">
+        <div class="download-card">
+          <div class="download-card__icon">📋</div>
+          <div>
+            <h3>Additional Trade Log Pages</h3>
+            <p>Blank trade log sheets in the same format as the journal — print as many as you need.</p>
+            <a href="#" download>Download PDF →</a>
+          </div>
+        </div>
+        <div class="download-card">
+          <div class="download-card__icon">📅</div>
+          <div>
+            <h3>Bonus Session Planner</h3>
+            <p>Extended session bias planning sheet with additional space for ASIA, CBDR, LDN and NY prep.</p>
+            <a href="#" download>Download PDF →</a>
+          </div>
+        </div>
+        <div class="download-card">
+          <div class="download-card__icon">📊</div>
+          <div>
+            <h3>Performance Review One-Pager</h3>
+            <p>A condensed single-page performance review to use between your 25-trade checkpoints.</p>
+            <a href="#" download>Download PDF →</a>
+          </div>
+        </div>
+        <div class="download-card">
+          <div class="download-card__icon">📖</div>
+          <div>
+            <h3>Quick-Reference Glossary</h3>
+            <p>All key concepts from the Market Concept Handbook in a condensed A5 printable format.</p>
+            <a href="#" download>Download PDF →</a>
+          </div>
+        </div>
+        <div class="download-card">
+          <div class="download-card__icon">✅</div>
+          <div>
+            <h3>Pre-Flight Checklist Card</h3>
+            <p>A standalone A6 card version of the Pre-Flight Checklist — print and keep at your desk.</p>
+            <a href="#" download>Download PDF →</a>
+          </div>
+        </div>
+        <div class="download-card">
+          <div class="download-card__icon">🎯</div>
+          <div>
+            <h3>Weekly Game Plan Template</h3>
+            <p>Additional weekly planning sheets with extra space for multi-pair and session bias prep.</p>
+            <a href="#" download>Download PDF →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Success message -->
+      <div id="successMsg" style="display:none; text-align:center; margin-top:2rem; padding-top:1rem;">
+        <p style="color: #2d7a3e; font-weight:700; font-size:0.9rem; letter-spacing:0.05em;">
+          ✓ Code verified. Your downloads are now unlocked above.
+        </p>
+        <p style="font-size:0.85rem; margin-top:0.5rem;">
+          New resources are added here over time — bookmark this page and check back.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── NO CODE? ──────────────────────────────────────────── -->
+  <section class="section">
+    <div class="container text-center">
+      <span class="tag">Don't have a code?</span>
+      <h2>Purchase the journal to get access.</h2>
+      <div class="divider"></div>
+      <p style="margin: 0 auto 2rem;">The access code is printed on the inside cover of every physical copy of the journal. Free downloads are exclusive to buyers.</p>
+      <a href="purchase.html" class="btn btn--primary btn--large">Buy the Journal</a>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div style="font-family:'Libre Baskerville',serif; color:white; font-size:1rem; margin-bottom:0.4rem;">The Trading Performance System</div>
+          <p>A complete execution and review framework for discretionary traders. Published by SN Trades Publishing, 2026.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Pages</h4>
+          <a href="index.html">Home</a>
+          <a href="purchase.html">Buy the Book</a>
+          <a href="downloads.html">Free Downloads</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Social</h4>
+          <a href="https://www.instagram.com/tradingperformancesystem" target="_blank">Instagram</a>
+          <a href="https://www.tiktok.com/@tradingperformancesystem" target="_blank">TikTok</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© SN Trades Publishing, 2026. All rights reserved.</span>
+        <span>THE TRADING PERFORMANCE SYSTEM™</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Access code verification
+    // Replace 'TPS2026' with your actual access code(s)
+    const VALID_CODES = ['TPS2026', 'TPS-2026', 'TPSV1'];
+
+    function checkCode() {
+      const input = document.getElementById('codeInput').value.trim().toUpperCase();
+      const validNorm = VALID_CODES.map(c => c.toUpperCase());
+      if (validNorm.includes(input)) {
+        document.getElementById('errorMsg').style.display = 'none';
+        document.getElementById('downloadsGrid').classList.add('visible');
+        document.getElementById('successMsg').style.display = 'block';
+        document.getElementById('downloadsGrid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        document.getElementById('errorMsg').style.display = 'block';
+        document.getElementById('downloadsGrid').classList.remove('visible');
+        document.getElementById('successMsg').style.display = 'none';
+      }
+    }
+
+    document.getElementById('codeInput').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') checkCode();
+    });
+  </script>
+
+</body>
+</html>
